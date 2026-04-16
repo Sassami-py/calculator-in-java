@@ -6,30 +6,33 @@ public class Calculator{
     Scanner reader = new Scanner(System.in);
     
     System.out.println ("Insert a number:");
-      int number1 = reader.nextInt();
+      double number1 = reader.nextDouble();
     
     System.out.println ("insert a operator (+, -, * or /): ");
     String operator = reader.next();
     
     System.out.println ("Insert the last number: ");
-    int number2 = reader.nextInt();
+    double number2 = reader.nextDouble();
     
     if (operator.equals("+")) {
-      int result = number1+number2;
-      System.out.println (number1+operator+number2+"="+result);
+      double result = number1+number2;
+      System.out.println (number1+" + "+number2+" = "+result);
       
       } else if (operator.equals("-")){
-      int result = number1-number2;
-      System.out.println (number1+operator+number2+"="+result);
+      double result = number1-number2;
+      System.out.println (number1+" - "+number2+" = "+result);
       
       } else if (operator.equals("*")){
-      int result = number1*number2;
-      System.out.println (number1+operator+number2+"="+result);
+      double result = number1*number2;
+      System.out.println (number1+" * "+number2+" = "+result);
       
       } else if (operator.equals("/")){
-      int result = number1/number2;
-      System.out.println (number1+operator+number2+"="+result);
-      
+          if (number2 == 0){
+              System.out.println ("Invalide division. Impossible divide by 0!");
+          } else {
+              double result = number1/number2;
+              System.out.println (number1+" / "+number2+" = "+result);
+          }
       } else {
       System.out.println ("Invalid Operation!");
       }
