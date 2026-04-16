@@ -2,9 +2,11 @@ import java.util.Scanner;
 
 public class Calculator{
   public static void main (String[] args){
+          Scanner reader = new Scanner(System.in);
+      
+      while (true){
     
-    Scanner reader = new Scanner(System.in);
-    
+    System.out.println ("Insert 'end' in 'operator' wen you decide to exit the program.");
     System.out.println ("Insert a number:");
       double number1 = reader.nextDouble();
     
@@ -34,7 +36,9 @@ public class Calculator{
               System.out.println (number1+" / "+number2+" = "+result);
           }
       } else {
-      System.out.println ("Invalid Operation!");
+          System.out.println ("Exiting the system.");
+      break;
+      }
       }
     }
   }
